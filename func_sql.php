@@ -1,7 +1,7 @@
 <?php
   //sql문 관련 함수
 
-  function query($sql){
+  function query($sql){ //입력한 sql문 실행 후 결과에 따라 경고창 출력
     $result = mysqli_query($conn, $sql);
     if(!$result){
       alert_back('query error');
@@ -9,11 +9,11 @@
       alert('success');
     }
   }
-  function mysqli_row($sql,$array_name){
+  function mysqli_row($sql,$array_name){ //입력한 sql문 실행 후 결과를 배열에 넣음
     $result = mysqli_query($conn, $sql);
     $array_name = mysqli_fetch_array($result);
   }
-  function array_row_num($sql){
+  function array_row_num($sql, $num){ //sql문 실행 후 변수에 행 개수를 넣음 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);
     $num = mysqli_num_rows($row);
