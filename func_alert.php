@@ -7,7 +7,7 @@
   function alert_back($alert){ //경고창 출력 후 url 이동
     echo "<script>alert('".$alert."'); history.back();</script>";
   }
-  function location($url){ //url 이동
+  function locate($url){ //url 이동
     echo "<script>location.href='".$url."';</script>";
   }
  ?>
