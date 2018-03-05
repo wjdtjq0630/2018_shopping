@@ -1,8 +1,8 @@
 <?php
   $db_host = "localhost";
-  $db_user = "damn";
-  $db_password = "wjdtjq0630!";
-  $db_name = "damn";
+  $db_user = "phoneshop";
+  $db_password = "asdf1234";
+  $db_name = "phoneshop";
 
   $conn = mysqli_connect($db_host,$db_user,$db_password,$db_name);
 
@@ -11,5 +11,5 @@
   }
   include 'func_alert.php';
   include 'func_sql.php';
-  
+
  ?>
