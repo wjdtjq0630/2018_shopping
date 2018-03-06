@@ -10,4 +10,10 @@
   function locate($url){ //url 이동
     echo "<script>location.href='".$url."';</script>";
   }
+  function check_log(){ //이미 로그인한 경우 메인 페이지로 이동 
+    if(isset($_SESSION['user_name'])){
+      alert('이미 로그인 하셨습니다.');
+      locate('./index.php');
+    }
+  }
  ?>
