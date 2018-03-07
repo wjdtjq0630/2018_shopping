@@ -15,7 +15,7 @@
       alert('이미 로그인 하셨습니다.');
       locate('./index.php');
     }
-  function checkadmin(){ //관리자가 아닐 경우 돌려보냄
+  function check_admin(){ //관리자가 아닐 경우 돌려보냄
     if($_SESSION['user_name'] != "admin"){
       alert('관리자 전용 페이지 입니다.');
       locate('./index.php');
