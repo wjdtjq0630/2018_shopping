@@ -1,6 +1,7 @@
 <?php
   include 'config.php';
   session_start();
+  check_admin(); //관리자로 로그인 했는지 확인
  ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +11,7 @@
   </head>
   <body>
     <form action="productdb.php" method="post" enctype="multipart/form-data">
-      <select class="" name="">
+      <select class="" name="category">
         <?php
           $sql = "SELECT * FROM category";
           if($result = mysqli_query($conn, $sql)){
