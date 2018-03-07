@@ -1,3 +1,7 @@
+<?php
+  include 'config.php';
+  session_start();
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,15 +15,15 @@
           $sql = "SELECT * FROM category";
           if($result = mysqli_query($conn, $sql)){
             while($row = mysqli_fetch_array($result)){
-              $cat = htmlspecialchars($row['name']);
-              echo '<option value="'.$cat.'">'.$cat.'</option>';
+              $name = htmlspecialchars($row['name']);
+              echo '<option value="'.$name.'">'.$name.'</option>';
             }
           }
          ?>
       </select>
       상품명:<input type="text" name="product_name"><br>
       상품가격:<input type="text" name="product_price"><br>
-      상품 이미지<input type="file" name="product_image"><br>
+      상품이미지:<input type="file" name="product_image"><br>
       <input type="submit" value="등록하기">
     </form>
   </body>
