@@ -1,4 +1,7 @@
 <?php
+  include 'func_alert.php';
+  include 'func_sql.php';
+
   $db_host = "localhost";
   $db_user = "phoneshop";
   $db_password = "asdf1234";
@@ -9,7 +12,5 @@
   if(mysqli_connect_errno($conn)){
     echo "데이터베이스 연결 실패:".mysqli_connect_error();
   }
-  include 'func_alert.php';
-  include 'func_sql.php';
 
  ?>
