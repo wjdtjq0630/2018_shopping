@@ -13,7 +13,7 @@
     <form action="productdb.php" method="post" enctype="multipart/form-data">
       <select class="" name="category">
         <?php
-          $sql = "SELECT * FROM category";
+          $sql = "SELECT * FROM category ORDER BY id ASC"; //카테고리 목록을 id by 오름차순으로 불러옴
           if($result = mysqli_query($conn, $sql)){
             while($row = mysqli_fetch_array($result)){
               $name = htmlspecialchars($row['name']);
