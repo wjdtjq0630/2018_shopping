@@ -1,3 +1,8 @@
+<?php
+  include 'config.php';
+  session_start();
+  check_log();
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
