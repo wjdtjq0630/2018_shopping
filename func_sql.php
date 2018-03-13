@@ -15,8 +15,9 @@
     $result = mysqli_query($conn, $sql);
     if(!$result){ //실행 결과가 없을 경우 경고창 출력 후 뒤로가기
       alert_back('error');
-    }
-    $array_name = mysqli_fetch_array($result);
+    } else{
+        $array_name = mysqli_fetch_array($result);
+  }
   }
   function array_row_num($sql, $num){ //sql문 실행 후 변수에 행 개수를 넣음
     global $conn;
