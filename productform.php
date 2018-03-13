@@ -42,7 +42,7 @@
       옵션<input type="button" value="추가" onclick="showPopup();"><br>
       <ol id="option">
         <?php
-          $sql = "SELECT * FROM dt_category WHERE id='$id'";
+          $sql = "SELECT * FROM product_opt WHERE id='$id'";
           if($result = mysqli_query($conn, $sql)){
             while($row = mysqli_fetch_array($result)){
               echo '<li>'.htmlspecialchars($row['name']).'</li>';
