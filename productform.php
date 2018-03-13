@@ -9,11 +9,6 @@
     <meta charset="utf-8">
     <title>상품등록</title>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript">
-       function showPopup(){
-         window.open("add_option.php", "옵션 추가 창", "width=400, height=300, left=100, top=50");
-       }
-    </script>
   </head>
   <body>
     <form action="productdb.php" method="post" enctype="multipart/form-data">
@@ -39,17 +34,9 @@
       배송: <input type="text" name="p_delivery"><br>
       반품/교환: <input type="text" name="p_delivery"><br>
       A/S: <input type="text" name="p_delivery"><br>
-      옵션<input type="button" value="추가" onclick="showPopup();"><br>
-      <ol id="option">
-        <?php
-          $sql = "SELECT * FROM product_opt WHERE id='$id'";
-          if($result = mysqli_query($conn, $sql)){
-            while($row = mysqli_fetch_array($result)){
-              echo '<li>'.htmlspecialchars($row['name']).'</li>';
-            }
-          }
-         ?>
-      </ol>
+      옵션:<input type="text" name="option1"><br>
+      <!--버튼을 누르면 옵션을 추가하는 input 태그를 생성하는 javascript 코드 작성할 것
+        name은 option1, option2, option3 이런 식으로...-->
       <input type="submit" value="등록하기">
     </form>
   </body>
