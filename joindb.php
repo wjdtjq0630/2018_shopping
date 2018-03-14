@@ -1,7 +1,7 @@
 <?php
   include 'config.php';
-  session_start();
-  check_log();
+  session_start(); //세션 시작
+  check_log(); //이미 로그인 한 경우 돌려보냄
 
   $join_name = mysqli_real_escape_string($conn,$_POST['join_name']);
   $join_id = mysqli_real_escape_string($conn,$_POST['join_id']);
@@ -18,7 +18,5 @@
     locate('./login.php');
   } else{
     alert_back('이미 사용중인 아이디 입니다.');
-    //history.back();해주면 결과 값 같이 넘어감
-    //locate("./join.php?checked_id=$join_id"); //아이디 중복시 중복인 아이디 되돌려주기 //추후 post방식으로 변경할 것
   }
  ?>
