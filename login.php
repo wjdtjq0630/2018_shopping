@@ -6,5 +6,5 @@
  <form class="" action="logindb.php" method="post">
    <input type="text" name="login_id"><br>
    <input type="password" name="login_pw"><br>
-   <input type="submit" value="login">
+   <input type="submit" value="login"><a href="./join.php">회원가입</a>
  </form>
