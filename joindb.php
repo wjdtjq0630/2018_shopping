@@ -12,11 +12,13 @@
   $join_email = mysqli_real_escape_string($conn,$_POST['join_email']);
 
   $sql = "SELECT * FROM user_info WHERE user_id='$join_id'";
-  if(!$result = mysqli_query($conn, $sql)){
-    $sql = "INSERT INTO user_info (user_id,user_pw,user_phn,user_adr,user_email,user_name) VALUES ('$join_id','$user_pw','$join_phn','$join_adr','$user_email','$join_name')";
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_array($result);
+  if(!$row){
+    $sql = "INSERT INTO user_info (user_id,user_pw,user_phn,user_adr,user_email,user_name) VALUES ('$join_id','$join_pw','$join_phn','$join_adr','$join_email','$join_name')";
     query($sql);
     locate('./login.php');
   } else{
-    alert_back('이미 사용중인 아이디 입니다.');
+    alert_back('이미 사용 중인 아이디입니다!');
   }
  ?>
