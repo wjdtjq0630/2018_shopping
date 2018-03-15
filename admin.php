@@ -11,7 +11,7 @@
    </head>
    <body>
      <ul>
-       <li><a href="./category.php">카테고리 관리</a></li>
+       <li><a href="./category_list.php">카테고리 관리</a></li>
        <li><a href="./productform.php">상품 등록</a></li>
        <li><a href="./edit_product.php">상품 수정</a></li>
      </ul>
