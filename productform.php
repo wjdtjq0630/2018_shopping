@@ -1,7 +1,7 @@
 <?php
   include 'config.php';
   session_start();
-  //check_admin(); //관리자로 로그인 했는지 확인
+  check_admin(); //관리자로 로그인 했는지 확인
  ?>
 <!DOCTYPE html>
 <html>
@@ -37,7 +37,7 @@
       옵션:<input type="text" name="option1"><br>
       <!--버튼을 누르면 옵션을 추가하는 input 태그를 생성하는 javascript 코드 작성할 것
         name은 option1, option2, option3 이런 식으로...-->
-      <input type="submit" value="등록하기">
+      <input type="submit" value="등록하기"><a href="./admin.php">취소하기</a>
     </form>
   </body>
 </html>
