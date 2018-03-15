@@ -18,7 +18,7 @@
             $sql = "SELECT * FROM category";
             if($result = mysqli_query($conn, $sql)){
                 while($row = mysqli_fetch_array($result)){
-                  echo "<a href='./category.php?name={$row['name']}'>{$row['id']}:{$row['name']}</a><br>";
+                  echo "<a href='./category.php?id={$row['id']}'>{$row['id']}: {$row['name']}</a><br>";
                 }
             }
           ?>
