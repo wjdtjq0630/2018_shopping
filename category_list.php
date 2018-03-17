@@ -23,5 +23,6 @@
                 }
             }
           ?>
+    <a href="./admin.php">관리자 메인페이지</a>
    </body>
  </html>
