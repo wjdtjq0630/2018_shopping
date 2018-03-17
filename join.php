@@ -21,7 +21,7 @@
         휴대폰 번호:<input type="text" name="join_phn" placeholder="휴대폰번호"><br>
         주소:<input type="text" name="join_adr" placeholder="주소"><br>
         이메일:<input type="text" name="join_email" placeholder="이메일"><br>
-        <input type="submit" value="가입하기">
+        <input type="submit" value="가입하기"><a href="./index.php">메인 페이지</a>
       </form>
     </header>
   </body>
