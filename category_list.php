@@ -10,6 +10,7 @@
      <title>카테고리 관리</title>
    </head>
    <body>
+     <h3>카테고리 목록</h3>
      <form class="" action="add_category.php" method="post"> <!--새로운 카테고리를 등록-->
        새로운 카테고리:<br><input type="text" name="new_category"><br>
        <input type="submit" value="등록하기">
