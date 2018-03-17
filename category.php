@@ -20,16 +20,17 @@
     <title>카테고리 <?php echo $id.'-'.$name;?></title>
   </head>
   <body>
+    <h3><?php echo "{$id}-{$name}" ?></h3>
       <form class="" action="add_dt_category.php" method="post"> <!--새로운 세부 카테고리 등록 -->
         새로운 세부 카테고리:<input type="text" name="new_dt_category">
         <input type="hidden" name="category_id" value="<?php echo $id;?>">
-        <input type="submit" value="등록하기">
+        <input type="submit" value="등록하기"><a href="./admin.php">관리자 메인페이지</a>
       </form>
       <?php
         $sql = "SELECT * FROM dt_category WHERE id='$id'";
         if($result = mysqli_query($conn, $sql)){
           while($row = mysqli_fetch_array($result)){
-            echo "<a href='./dt_category.php?id={$row['id']}'>{$row['id']}-{$row['name']}</a><br>";
+            echo "<a href='./dt_category.php?id={$row['id']}&dt_id={$row['name']}'>{$row['name']}</a><br>";
           }
         }
        ?>
