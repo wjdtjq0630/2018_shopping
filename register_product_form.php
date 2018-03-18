@@ -21,9 +21,10 @@
               echo '<option value="'.$row['id'].'">'.htmlspecialchars($row['name']).'</option>';
             }
           }
-          //선택한 카테고리의 id값 변수에 저장
+          //위에서 선택한 카테고리의 id값 변수에 저장
           $sql = "SELECT * FROM dt_category WHERE id='$id' ORDER BY id ASC";
           //mysqli_row($sql,$d_category); //선택한 카테고리의 세부 카테고리를 순서대로 $d_category에 저장
+          //$d_category에 저장된 목록 select-option으로 출력
          ?>
       </select><br>
       상품명: <input type="text" name="p_name"><br>
@@ -32,8 +33,8 @@
       상품 대표이미지: <input type="file" name="p_image"><br>
       상품 상세정보: <input type="file" name="p_detailimg"><br>
       배송: <input type="text" name="p_delivery"><br>
-      반품/교환: <input type="text" name="p_delivery"><br>
-      A/S: <input type="text" name="p_delivery"><br>
+      반품/교환: <input type="text" name="return"><br>
+      A/S: <input type="text" name="a/s"><br>
       옵션:<input type="text" name="option1"><br>
       <!--버튼을 누르면 옵션을 추가하는 input 태그를 생성하는 javascript 코드 작성할 것
         name은 option1, option2, option3 이런 식으로...-->
