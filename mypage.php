@@ -20,9 +20,10 @@
    </head>
    <body>
      <h3>회원정보</h3>
-     <form class="" action="mypagedb.php" method="post">
+     <form class="" action="edit_mypagedb.php" method="post">
        이름:<input type="text" name="new_name" value="<?php echo $user_name;?>"><br>
        아이디:<?php echo $user_id; ?><br>
+       <input type="hidden" name="user_id" value="<?php echo $user_id;?>">
        비밀번호:<input type="password" name="new_pw"><br>
        비밀번호 확인<input type="password" name="check_pw"><br>
        휴대폰 번호:<input type="text" name="new_phn" value="<?php echo $user_phn;?>"><br>
