@@ -21,14 +21,14 @@
    <body>
      <h3>회원정보</h3>
      <form class="" action="mypagedb.php" method="post">
-       이름:<input type="text" name="new_name" value="<?php echo $user_name; ?>"><br>
+       이름:<input type="text" name="new_name" value="<?php echo $user_name;?>"><br>
        아이디:<?php echo $user_id; ?><br>
        비밀번호:<input type="password" name="new_pw"><br>
        비밀번호 확인<input type="password" name="check_pw"><br>
-       휴대폰 번호:<input type="text" name="new_phn" value="<?php echo $user_phn; ?>"><br>
-       주소:<input type="text" name="new_adr" value="<?php echo $user_adr; ?>"><br>
-       이메일:<input type="text" name="new_email" value="<?php echo $user_email; ?>"><br>
-       <input type="submit" value="변경">
+       휴대폰 번호:<input type="text" name="new_phn" value="<?php echo $user_phn;?>"><br>
+       주소:<input type="text" name="new_adr" value="<?php echo $user_adr;?>"><br>
+       이메일:<input type="text" name="new_email" value="<?php echo $user_email;?>"><br>
+       <input type="submit" value="변경"><input type="button" value="뒤로가기" onclick="history.back();">
      </form>
    </body>
  </html>

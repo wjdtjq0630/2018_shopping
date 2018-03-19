@@ -15,6 +15,7 @@
        <li><a href="./category_list.php">카테고리 관리</a></li>
        <li><a href="./productform.php">상품 등록</a></li>
        <li><a href="./edit_product.php">상품 수정</a></li>
+       <input type="button" value="뒤로가기" onclick="history.back();">
      </ul>
    </body>
  </html>
