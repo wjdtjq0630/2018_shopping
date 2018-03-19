@@ -21,6 +21,10 @@
    <body>
      <h4><?php echo "{$id}:{$row['name']}";?></h4>
      <h3><?php echo $dt_id;?></h3>
+     <form class="" action="index.html" method="post">
+       세부 카테고리명:<input type="text" name="dt_category_name" value="<?php echo $dt_id;?>">
+       <input type="submit" value="변경하기">
+     </form>
      <table border=1>
        <tr>
          <th>상품코드</th><th>상품명</th><th>모델명</th>
