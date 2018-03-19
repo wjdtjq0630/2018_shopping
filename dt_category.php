@@ -6,17 +6,21 @@
   if(empty($_GET['id']) || empty($_GET['dt_id'])){
     alert_back('잘못된 접근입니다!');
   } else{
-      $id = mysqli_real_escape_string($conn, $_GET['id']);
-      $dt_id = mysqli_real_escape_string($conn, $_GET['dt_id']);
+      $id = mysqli_real_escape_string($conn, $_GET['id']); //카테고리의 아이디 값
+      $dt_id = mysqli_real_escape_string($conn, $_GET['dt_id']); //세부 카테고리의 아이디 값
+      $sql = "SELECT * FROM category WHERE id='$id'";
+      $row = mysqli_fetch_array(mysqli_query($conn, $sql));
   }
  ?>
  <!DOCTYPE html>
  <html>
    <head>
      <meta charset="utf-8">
-     <title>세부 카테고리 - <?php echo $dt_id; ?></title>
+     <title><?php echo "{$id}:{$row['name']}-{$dt_id}"; ?></title>
    </head>
    <body>
+     <h4><?php echo "{$id}:{$row['name']}";?></h4>
+     <h3><?php echo $dt_id;?></h3>
      <table border=1>
        <tr>
          <th>상품코드</th><th>상품명</th><th>모델명</th>
@@ -30,5 +34,6 @@
       }
       ?>
       </table>
+      <input type="button" value="뒤로가기" onclick="history.back();">
    </body>
  </html>
