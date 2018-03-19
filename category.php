@@ -37,6 +37,6 @@
          <input type="hidden" name="category_id" value="<?php echo $id;?>">
          <input type="submit" value="등록하기">
        </form>
-       <input type="button" value="관리자 메인페이지" onclick="location.href='./admin.php'">
+       <input type="button" value="뒤로가기" onclick="history.back();">
   </body>
 </html>
