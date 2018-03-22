@@ -26,7 +26,7 @@
   function check_admin(){ //로그인하지 않았거나 관리자가 아닐 경우 돌려보냄
     if(empty($_SESSION['user_id'])){
       alert_url('로그인 후 이용하세요!','./login.php');
-      } else if(empty($_SESSION['admin_id'])){
+      } else if(empty($_SESSION['admin'])){
         alert_back('관리자 전용 페이지 입니다!');
       }
   }
