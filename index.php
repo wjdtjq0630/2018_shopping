@@ -34,28 +34,20 @@
 	<nav>
 		<div class="container">
 			<ul>
-				<li>
-					<a href="/">갤럭시 시리즈</a>
-				</li>
-				<li>
-					<a href="/">갤럭시 노트</a>
-				</li>
-				<li>
-					<a href="/">아이폰 시리즈</a>
-				</li>
-				<li>
-					<a href="/">LG 시리즈</a>
-				</li>
-				<li>
-					<a href="/">기타</a>
-				</li>
         <?php
+          $sql = "SELECT * FROM category";
+          if($result = mysqli_query($conn, $sql)){
+            while($row = mysqli_fetch_array($result)){
+              echo "<li><a href='./sdf.php?id={$row['id']}'>{$row['name']}</a></li>";
+            }
+          }
+         ?>
+        <?
           if(isset($_SESSION['user_id']) && isset($_SESSION['user_name'])){ //로그인 한 경우
             $user_id = htmlspecialchars($_SESSION['user_id']);
             $user_name = htmlspecialchars($_SESSION['user_name']);
             echo "<li><a href='./mypage.php'>{$user_name}({$user_id})</a></li><li><a href='./logout.php'>로그아웃</a></li>";
             if($user_id == "admin"){
-              echo "<li><a href='./mypage.php'>{$user_name}({$user_id}})</a></li>";
               echo '<li><a href="./admin.php">관리자 페이지</a></li>';
             }
           } else{ //로그인 하지 않은 경우 로그인 링크 출력
