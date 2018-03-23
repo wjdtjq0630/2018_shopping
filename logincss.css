@@ -1,0 +1,13 @@
+
+    section.login
+    {
+        height: 500px;
+    }
+        .login div.container
+        {
+            background: linear-gradient(-135deg, #E4A972, #9941D8) fixed;
+        }
+    lgform
+    {
+	    margin: 0 auto;
+    }
