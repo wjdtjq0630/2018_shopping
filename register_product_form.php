@@ -30,14 +30,14 @@
           //$d_category에 저장된 목록 select-option으로 출력
          ?>
        </select><br>
-      상품명: <input type="text" name="p_name"><br>
-      모델명: <input type="text" name="p_model"><br>
-      상품 가격: <input type="text" name="p_price"><br>
-      상품 대표이미지: <input type="file" name="p_image"><br>
-      상품 상세정보: <input type="file" name="p_detailimg"><br>
-      배송: <input type="text" name="p_delivery"><br>
-      반품/교환: <input type="text" name="exchange"><br>
-      A/S: <input type="text" name="a/s"><br>
+      *상품명: <input type="text" name="p_name"><br>
+      *모델명: <input type="text" name="p_model"><br>
+      *상품 가격: <input type="text" name="p_price"><br>
+      *상품 대표이미지: <input type="file" name="p_img"><br>
+      상품 상세정보: <input type="file" name="p_detail_img"><br>
+      *배송: <input type="text" name="p_delivery"><br>
+      *반품/교환: <input type="text" name="exchange"><br>
+      *A/S: <input type="text" name="a_s"><br>
       옵션:<input type="text" name="option1"><br>
       <!--입력하지 않은 곳이 있으면 submit 비활성화 및 경고 표시 -->
       <!--버튼을 누르면 옵션을 추가하는 input 태그를 생성하는 javascript 코드 작성할 것
