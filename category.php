@@ -22,6 +22,7 @@
   <body>
     <h3><?php echo "{$id}:{$name}" ?></h3>
     <form class="" action="edit_category_name.php" method="post">
+      <input type="hidden" name="category_id" value="<?php echo $id;?>">
       카테고리 이름:<input type="text" name="category_name" value="<?php echo $name;?>"><input type="submit" value="변경하기">
     </form>
       <?php
@@ -37,6 +38,6 @@
          <input type="hidden" name="category_id" value="<?php echo $id;?>">
          <input type="submit" value="등록하기">
        </form>
-       <input type="button" value="뒤로가기" onclick="history.back();">
+       <input type="button" value="뒤로가기" onclick='location.href="category_list.php"'>
   </body>
 </html>
