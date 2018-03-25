@@ -5,13 +5,13 @@
 
   if(empty($_GET['id'])){
     alert_back('잘못된 접근입니다.');
-  }
-
-  $id = htmlspecialchars($_GET['id']);
-  $sql = "SELECT * FROM category WHERE id='$id'";
-  $result = mysqli_query($conn, $sql);
-  $category = mysqli_fetch_array($result);
-  $name = $category['name'];
+  } else{
+      $id = htmlspecialchars($_GET['id']);
+      $sql = "SELECT * FROM category WHERE id='$id'";
+      $result = mysqli_query($conn, $sql);
+      $category = mysqli_fetch_array($result);
+      $name = $category['name'];
+    }
  ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +29,7 @@
         $sql = "SELECT * FROM dt_category WHERE id='$id'";
         if($result = mysqli_query($conn, $sql)){
           while($row = mysqli_fetch_array($result)){
-            echo "<a href='./dt_category.php?id={$row['id']}&dt_id={$row['name']}'>{$row['name']}</a><br>";
+            echo "<a href='./dt_category.php?id={$row['id']}&dt_id={$row['dt_id']}'>{$row['name']}</a><br>";
           }
         }
        ?>
