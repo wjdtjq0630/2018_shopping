@@ -10,19 +10,23 @@
       $dt_id = mysqli_real_escape_string($conn, $_GET['dt_id']); //세부 카테고리의 아이디 값
       $sql = "SELECT * FROM category WHERE id='$id'";
       $row = mysqli_fetch_array(mysqli_query($conn, $sql));
+      $sql = "SELECT * FROM dt_category WHERE id='$id' AND dt_id='$dt_id'";
+      $dt = mysqli_fetch_array(mysqli_query($conn, $sql));
   }
  ?>
  <!DOCTYPE html>
  <html>
    <head>
      <meta charset="utf-8">
-     <title><?php echo "{$id}:{$row['name']}-{$dt_id}"; ?></title>
+     <title><?php echo "{$id}-{$row['dt_id']}:{$row['name']}-{$dt_id}"; ?></title>
    </head>
    <body>
-     <h4><?php echo "{$id}:{$row['name']}";?></h4>
-     <h3><?php echo $dt_id;?></h3>
-     <form class="" action="index.html" method="post">
-       세부 카테고리명:<input type="text" name="dt_category_name" value="<?php echo $dt_id;?>">
+     <h4><?php echo "{$id}-{$row['dt_id']}:{$row['name']}";?></h4>
+     <h3><?php echo $dt['name'];?></h3>
+     <form class="" action="edit_dt_category_name.php" method="post">
+       <input type="hidden" name="category_id" value="<?php echo $id;?>">
+       <input type="hidden" name="dt_category_name" value="<?php echo $dt_id;?>">
+       세부 카테고리명:<input type="text" name="new_name" value="<?php echo $dt['name'];?>">
        <input type="submit" value="변경하기">
      </form>
      <table border=1>
