@@ -18,14 +18,15 @@
  <html>
    <head>
      <meta charset="utf-8">
-     <title><?php echo "{$id}-{$row['dt_id']}:{$row['name']}-{$dt_id}"; ?></title>
+     <title><?php echo "{$id}:{$row['name']}-{$dt['name']}"; ?></title>
    </head>
    <body>
-     <h4><?php echo "{$id}-{$row['dt_id']}:{$row['name']}";?></h4>
+     <h4><?php echo "{$id}:{$row['name']}";?></h4>
      <h3><?php echo $dt['name'];?></h3>
      <form class="" action="edit_dt_category_name.php" method="post">
        <input type="hidden" name="category_id" value="<?php echo $id;?>">
        <input type="hidden" name="dt_category_name" value="<?php echo $dt_id;?>">
+       <input type="hidden" name="name" value="<?php echo $row['name']; ?>">
        세부 카테고리명:<input type="text" name="new_name" value="<?php echo $dt['name'];?>">
        <input type="submit" value="변경하기">
      </form>
@@ -42,6 +43,6 @@
       }
       ?>
       </table>
-      <input type="button" value="뒤로가기" onclick="history.back();">
+      <input type="button" value="뒤로가기" onclick="location.href='./category.php?id=<?php echo $id; ?>'">
    </body>
  </html>
