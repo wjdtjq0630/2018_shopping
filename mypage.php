@@ -3,14 +3,14 @@
   session_start();
   check_unlog(); //로그인 안되었으면 로그인 페이지로
 
-  $user_id = htmlspecialchars($_SESSION['user_id']);
-  $user_name = htmlspecialchars($_SESSION['user_name']);
+  $user_id = htmlspecialchars($_SESSION['user_id']); //회원 아이디
+  $user_name = htmlspecialchars($_SESSION['user_name']); //회원명
 
   $sql = "SELECT * FROM user_info WHERE user_id='$user_id'";
-  $row = mysqli_fetch_array(mysqli_query($conn, $sql));
-  $user_phn = htmlspecialchars($row['user_phn']);
-  $user_adr = htmlspecialchars($row['user_adr']);
-  $user_email = htmlspecialchars($row['user_email']);
+  $row = mysqli_fetch_array(mysqli_query($conn, $sql)); //회원 정보를 배열에 저장
+  $user_phn = htmlspecialchars($row['user_phn']); //회원 전화번호
+  $user_adr = htmlspecialchars($row['user_adr']); //회원 주소
+  $user_email = htmlspecialchars($row['user_email']); //회원 이메일
  ?>
  <!DOCTYPE html>
  <html>

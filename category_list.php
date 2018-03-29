@@ -17,8 +17,8 @@
      </form>
          <?php //카테고리로 이동
             $sql = "SELECT * FROM category";
-            if($result = mysqli_query($conn, $sql)){
-                while($row = mysqli_fetch_array($result)){
+            if($result = mysqli_query($conn, $sql)){ //카테고리 목록 불러오기
+                while($row = mysqli_fetch_array($result)){ //배열에 담기
                   echo "<a href='./category.php?id={$row['id']}'>{$row['id']}: {$row['name']}</a><br>";
                 }
             }

@@ -3,14 +3,14 @@
   session_start();
   check_admin();
 
-  if(empty($_GET['id'])){
+  if(empty($_GET['id'])){ //url에 id값이 없을 경우 뒤로가기
     alert_back('잘못된 접근입니다.');
   } else{
       $id = htmlspecialchars($_GET['id']);
-      $sql = "SELECT * FROM category WHERE id='$id'";
+      $sql = "SELECT * FROM category WHERE id='$id'"; //해당 카테고리의 세부 카테고리 목록
       $result = mysqli_query($conn, $sql);
-      $category = mysqli_fetch_array($result);
-      $name = $category['name'];
+      $category = mysqli_fetch_array($result); //배열에 저장
+      $name = $category['name']; //카테고리의 이름
     }
  ?>
 <!DOCTYPE html>
@@ -27,8 +27,8 @@
     </form>
       <?php
         $sql = "SELECT * FROM dt_category WHERE id='$id'";
-        if($result = mysqli_query($conn, $sql)){
-          while($row = mysqli_fetch_array($result)){
+        if($result = mysqli_query($conn, $sql)){ //세부 카테고리 목록
+          while($row = mysqli_fetch_array($result)){ //배열에 저장
             echo "<a href='./dt_category.php?id={$row['id']}&dt_id={$row['dt_id']}'>{$row['name']}</a><br>";
           }
         }

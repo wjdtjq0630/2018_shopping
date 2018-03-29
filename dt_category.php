@@ -9,9 +9,9 @@
       $id = mysqli_real_escape_string($conn, $_GET['id']); //카테고리의 아이디 값
       $dt_id = mysqli_real_escape_string($conn, $_GET['dt_id']); //세부 카테고리의 아이디 값
       $sql = "SELECT * FROM category WHERE id='$id'";
-      $row = mysqli_fetch_array(mysqli_query($conn, $sql));
+      $row = mysqli_fetch_array(mysqli_query($conn, $sql)); //해당 카테고리의 정보 배열에 저장
       $sql = "SELECT * FROM dt_category WHERE id='$id' AND dt_id='$dt_id'";
-      $dt = mysqli_fetch_array(mysqli_query($conn, $sql));
+      $dt = mysqli_fetch_array(mysqli_query($conn, $sql)); //해당 카테고리의 세부 카테고리 정보 배열에 저장
   }
  ?>
  <!DOCTYPE html>
@@ -36,7 +36,7 @@
      <?php
       $sql = "SELECT * FROM product WHERE category_id='$id' AND dt_id='$dt_id'";
       if($result = mysqli_query($conn, $sql)){
-        while($row = mysqli_fetch_array($result)){
+        while($row = mysqli_fetch_array($result)){ //해당 세부 카테고리의 상품 목록 배열에 저장
           echo "<td>{$row['id']}</td><td>{$row['name']}</td><td>{$row['model']}</td>"; //제품정보 테이블로 출력
         }
       }
