@@ -30,6 +30,7 @@
        주소:<input type="text" name="new_adr" value="<?php echo $user_adr;?>"><br>
        이메일:<input type="text" name="new_email" value="<?php echo $user_email;?>"><br>
        <input type="submit" value="변경"><input type="button" value="뒤로가기" onclick="history.back();">
+       <input type="button" value="탈퇴하기" style="color:red" onclick="location.href='./leave.php'">
      </form>
    </body>
  </html>
